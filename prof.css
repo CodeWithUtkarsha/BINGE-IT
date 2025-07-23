@@ -1,0 +1,316 @@
+/* Body styling for a dark background */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(37, 37, 37);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Profile container styling */
+.profile-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #333; /* Dark gray for contrast */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    text-align: center;
+    position: relative;
+}
+
+/* Profile heading */
+.profile-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for contrast */
+}
+
+/* Notification icon style */
+.notification-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #ff4757; /* Highlight color */
+    cursor: pointer;
+}
+
+/* Profile section styling */
+.profile-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #444; /* Darker background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Slight shadow for each section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Profile image styling */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ffa502;
+    margin-bottom: 15px;
+    background-color: #666; /* Placeholder color */
+}
+
+/* Section title styling */
+.profile-section h3 {
+    font-size: 18px;
+    color: #ffa502; /* Accent color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-section h3 .icon {
+    font-size: 16px;
+    color: #ff6b6b;
+    margin-right: 10px;
+}
+
+/* Outlined profile detail boxes */
+.profile-detail-box {
+    border: 1px solid #666; /* Border color for outline */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+    background-color: #555; /* Darker shade */
+    color: #e0e0e0; /* Light text color */
+}
+
+.profile-detail-box strong {
+    display: block;
+    font-size: 14px;
+    color: #ffa502; /* Accent color */
+    margin-bottom: 5px;
+}
+
+/* List styling for bookings */
+.profile-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-section li {
+    font-size: 15px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+/* Button styling */
+button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Button shadow */
+}
+
+.edit-btn {
+    background-color: #007bff;
+}
+
+.view-btn {
+    background-color: #28a745;
+}
+
+.settings-btn {
+    background-color: #ffc107;
+    margin-right: 10px;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+
+/* new */
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #333;
+    color: #e0e0e0;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #ffa502;
+}
+
+.modal-content input[type="password"] {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffa502;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Payment method modal content styling */
+.payment-method-options button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-form {
+    margin-top: 10px;
+}
+
+.payment-form h4 {
+    color: #ffa502;
+    margin-bottom: 8px;
+}
+
+.payment-form input {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+}
+
+.payment-form button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Notifications section styling */
+.notifications {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    text-align: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.notification-bell {
+    cursor: pointer;
+    font-size: 24px;
+    position: relative;
+    color: #ffa502; /* Customize color for the bell icon */
+}
+
+.notification-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.notification-dropdown {
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    width: 250px;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default, toggled with JavaScript */
+}
+
+.notification-dropdown h4 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #ffa502;
+    text-align: left;
+}
+
+.notification-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-dropdown li {
+    padding: 8px 0;
+    border-bottom: 1px solid #444;
+}
+
+.notification-dropdown li:last-child {
+    border-bottom: none;
+}

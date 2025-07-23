@@ -1,0 +1,145 @@
+/* General Styles */
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f2f37; /* Dark background color 
+    margin: 0;
+    padding: 0;
+    display:list-item;
+    height: 100vh;
+    color: white; /* Make the default text color white 
+} */
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(37, 37, 37);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background-color: #3b3b47; /* Darker form background */
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for dark theme */
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #42a5f5; /* Blue border to pop against dark theme */
+}
+
+/* Logo Image */
+.logo-img {
+    max-width: 100px;
+    margin-bottom: 20px; /* Add some space below the logo */
+}
+
+/* Form Heading */
+.login-container h2, .login-container h3 {
+    color: #ffffff; /* White text for headings */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input Labels */
+.input-group label {
+    display: block;
+    color: #ffffff; /* White label text */
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Input Fields */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #555555; /* Darker border for inputs */
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #2c2c38; /* Darker background for input fields */
+    color: white; /* White text for input fields */
+    transition: border-color 0.3s ease;
+}
+
+/* Change border color on focus */
+.input-group input:focus {
+    border-color: #42a5f5; /* Blue border on focus to match theme */
+    outline: none;
+}
+
+/* Login and Action Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    color: white; /* White text for buttons */
+}
+
+/* Primary Action Button - Login */
+.login-btn {
+    background-color: #42a5f5; /* Primary Blue */
+}
+
+.login-btn:hover {
+    background-color: #1e88e5; /* Darker Blue on hover */
+}
+
+/* Google Login Button */
+.google-btn {
+    background-color: #db4437; /* Google Red */
+}
+
+.google-btn:hover {
+    background-color: #c33d2e; /* Darker red on hover */
+}
+
+/* Back Button */
+.back-btn {
+    background-color: #ef5350; /* Red for back button */
+}
+
+.back-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Forgot Password Link */
+.extra-links a {
+    color: #42a5f5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+/* Forgot Password Container */
+#forgot-password-form, #gmail-signup-form {
+    display: none;
+}
+
+h3 {
+    font-size: 20px;
+    color: #ffffff; /* White heading text */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINGE-IT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="prof.css">
+    <link rel="stylesheet" href="offers.css">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Montserrat:wght@300;400&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300;400&family=Sen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <h1 id="logo">BINGE IT</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="prof.html">My_Profile</a></li>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="slide-section">
+            <div class="slideshow">
+                <input type="radio" id="i1" name="images" checked>
+                <input type="radio" id="i2" name="images" >
+                <input type="radio" id="i3" name="images" >
+                <input type="radio" id="i4" name="images" >
+
+                <div class="slide_img" id="one">			
+                    <img src="IMG/Sale is (2).png">
+                </div>
+
+                <div class="slide_img" id="two">			
+                    <img src="IMG/Sale is (4).png">
+                </div>
+
+                <div class="slide_img" id="three">			
+                    <img src="IMG/Sale is (3).png">
+                </div>
+
+                <div class="slide_img" id="four">			
+                    <img src="IMG/Sale is (5).png">
+                </div>
+
+                <div id="nav_slide">
+                    <label for="i1" class="dots" id="dot1"></label>
+                    <label for="i2" class="dots" id="dot2"></label>
+                    <label for="i3" class="dots" id="dot3"></label>
+                    <label for="i4" class="dots" id="dot4"></label>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="content-container ">
+            <div class="ticket" >
+                <div class="ticket-choice transition">
+                    <h1>Book Your Seat</h1>
+                    <select class="select">
+                        <option disabled selected id="options" value="cinemas">Movies</option>
+                            <option value="one">Fantastic Beasts</option>
+                            <option value="two">RRR</option>
+                            <option value="three">Kahani 2</option>
+                            <option value="four">KGF 2</option>
+                            <option value="four">Monster House</option>
+                            <option value="four">Halloween</option>
+                            <option value="four">Inception</option>
+                    </select>
+                    <select class="select">
+                        <option disabled selected value="timings">Timings</option>
+                            <option value="one">09:00 AM</option>
+                            <option value="two">12:30 PM</option>
+                            <option value="three">04:00 PM</option>
+                            <option value="four">07:30 PM</option>
+                            <option value="four">11:00 PM</option>
+                    </select>
+                    <p>Select your preferred choices above and click proceed</p>
+                    <button class=" button select "><a class="pagelink" href="seat.html">Proceed</a> </button>
+                </div>
+            </div>
+            
+            <div class="movie-display">
+                <h1 id="movies">Available Movies</h1>
+
+                    <div class="movie-box-wrapper">
+                        <div class="movie-list" >
+                            <div class="movie-card" onclick="displayButton(), cardDesc1()">
+                                <img class="movie-card-img" src="./IMG/ulajh poster.webp" alt="">
+                                <span class="movie-card-title">Ulajh</span>
+                                <p class="movie-card-desc">"Ulajh" is a Hindi spy thriller about a young diplomat who uncovers conspiracies while navigating a world of espionage..</p>
+                                <button class="movie-card-button" onclick="window.location.href='https://www.youtube.com/watch?v=DGhq0Kx8dzQ';" >Watch Trailer</button>
+                                <span class="card-bottom-text">Thriller/Drama</span>
+                            </div>
+                            <div class="movie-card" onclick="displayButton(), cardDesc2()">
+                                <img class="movie-card-img" src="./IMG/saripoda sanivaram  poster.jpeg" alt="">
+                                <span class="movie-card-title">Saripodhaa Sanivaaram</span>
+                                <p class="movie-card-desc">A fictitious story about two legendary revolutionaries and their journey away from home before they started fighting for their country in 1920's.</p>
+                                <button class="movie-card-button" onclick="window.location.href='https://www.youtube.com/watch?v=GY4BgdUSpbE';">Watch Trailer</button>
+                                <span class="card-bottom-text">Action/Drama  </span>
+                            </div>
+                            <div class="movie-card" onclick="displayButton(), cardDesc3()">
+                                <img class="movie-card-img" src="IMG/KAHANI-2.jpeg" alt="">
+                                <span class="movie-card-title">Kahani 2</span>
+                                <p class="movie-card-desc">A woman with a mysterious past is charged with kidnapping and murder.</p>
+                                <button class="movie-card-button " onclick="window.location.href='https://www.youtube.com/watch?v=Ez4mXaeSKuk';">Watch Trailer</button>
+                                <span class="card-bottom-text">Mystery · Thriller</span>
+                            </div>
+                            <div class="movie-card" onclick="displayButton(), cardDesc4()">
+                                <img class="movie-card-img" src="IMG/kgf2.png" alt="">
+                                <span class="movie-card-title">KGF 2</span>
+                                <p class="movie-card-desc">In the blood-soaked Kolar Gold Fields, Rocky's name strikes fear into his foes. While his allies look up to him, the government sees him as a threat to law and order. Rocky must battle threats from all sides for unchallenged supremacy.</p>
+                                <button class="movie-card-button" onclick="window.location.href='https://www.youtube.com/watch?v=JKa05nyUmuQ';">Watch Trailer</button>
+                                <span class="card-bottom-text">Action · Drama · Period</span>
+                                
+                            </div>
+                            <div class="movie-card" onclick="displayButton(), cardDesc5()">
+                                <img class="movie-card-img" src="IMG/MOSTER HOUSE.jpeg" alt="">
+                                <span class="movie-card-title">Monster House</span>
+                                <p class="movie-card-desc">"Monster House" is an animated comedy with horror elements, and it turns a bit too dark in its final third but is still fun — and certainly more original than most films aimed at kids.</p>
+                                <button class="movie-card-button" onclick="window.location.href='https://www.youtube.com/watch?v=Iru7Q2qmijQ';">Watch Trailer</button>
+                                <span class="card-bottom-text">Comedy · Fantasy · Mystery</span>
+                            </div>
+                            <div class="movie-card" onclick="displayButton(), cardDesc6()">
+                                <img class="movie-card-img" src="IMG/The-kashmir-files.jpeg" alt="">
+                                <span class="movie-card-title">The Kashmir Files</span>
+                                <p class="movie-card-desc">The film presents a fictional storyline centred around an exodus of Kashmiri Hindus in the disputed region of Kashmir. It depicts the early-1990 exodus to be a genocide, a notion that is widely considered inaccurate and associated with conspiracy theories.</p>
+                                <button class="movie-card-button" onclick="window.location.href='https://www.youtube.com/watch?v=A179apttY58&t=8s';">Watch Trailer</button>
+                                <span class="card-bottom-text">Drama</span>
+                                
+                            </div>
+                            <div class="movie-card" onclick="displayButton(), cardDesc7()">
+                                <img class="movie-card-img" src="IMG/HALLOWEEN.jpeg" alt="">
+                                <span class="movie-card-title">Halloween</span>
+                                <p class="movie-card-desc">Jamie Lee Curtis returns to her iconic role as Laurie Strode, who comes to her final confrontation with Michael Myers, the masked figure who has haunted her since she narrowly escaped his killing spree on Halloween night four decades ago.</p>
+                                <button class="movie-card-button" onclick="window.location.href='https://www.youtube.com/watch?v=ek1ePFp-nBI';">Watch Trailer</button>
+                                <span class="card-bottom-text">Crime · Horror · Thriller</span>
+                            </div>
+                            <div class="movie-card" onclick="displayButton(), cardDesc8()">
+                                <img class="movie-card-img" src="IMG/INCEPTION.jpeg" alt="">
+                                <span class="movie-card-title">Inception</span>
+                                <p class="movie-card-desc">A science fiction action film based on professional thief who steals information by infiltrating the subconscious of his targets.</p>
+                                <button class="movie-card-button" onclick="window.location.href='https://www.youtube.com/watch?v=YoHD9XEInc0';">Watch Trailer</button>
+                                <span class="card-bottom-text">Action · Science Fiction · Heist</span>
+                            </div>
+                        </div>
+                        
+                        <div class="content-onclick " >
+                            <p id="movie-content">
+                               CLICK IT !!! TO BINGE IT !!
+                            </p>
+                            <button class="btn" id="book-button"><a class="pagelink" href="seat.html">Book Now</a> </button>
+                        </div>
+
+                    </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-wrapper">
+            <div class="bar"></div>
+            <div class="middle_icon">
+                 <img src="./IMG/logo.jpg"> 
+                </div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="footer-container">
+            
+            <div class="about" id="about">
+                <h3>About Us</h3>
+                <p>
+                Binge-it is a booking management system based website where you can book tickets of your favourite movies in just a few clicks. We provide users to naviagate through the various information about their choice of movies and book the tickets for the same with ease.
+                </p>
+            </div>
+            
+            <div class="contact-info" id="contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>ICT bhavan,GITAM</li>
+                    <li>Visakhapatanam, andhra pradesh</li>
+                    <li> Rushikonda 530002, India</li>
+                    <li>4641-7754-5747</li>
+                </ul>
+                <br>
+                <a href= "mailto:flix.info@gmail.com">bingeit@gmail.com</a>
+            </div>
+            <div class="quick-links">
+                <h3>Direct Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="seat.html">Bookings</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+           
+
+        </div>
+        <div class="footer-logo">
+            <span>&#169; 2022 fliX. All rights reserved </span>
+        </div>
+    </footer>
+
+
+<script src="main.js"></script>
+<script src="login.js"></script>
+<script src="prof.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
