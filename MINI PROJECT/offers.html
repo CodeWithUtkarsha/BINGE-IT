@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Discounts - Binge It</title>
+    <link rel="stylesheet" href="offers.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="page-title">Offers & Discounts</h1>
+        <p class="subtitle">Grab the best deals for your favorite movies!</p>
+    </header>
+
+    <main>
+        <section class="offers-container">
+            <!-- Offer 1 -->
+            <div class="offer-card" onclick="showOfferDetails('offer1')">
+                <div class="offer-info">
+                    <h2>Weekend Special</h2>
+                    <p>Get 25% off on all weekend shows. Limited time only!</p>
+                    <span class="offer-code">Code: WEEKEND25</span>
+                </div>
+                <button class="offer-btn">Claim Offer</button>
+            </div>
+
+            <!-- Offer 2 -->
+            <div class="offer-card" onclick="showOfferDetails('offer2')">
+                <div class="offer-info">
+                    <h2>Student Discount</h2>
+                    <p>20% off for students with valid ID. Enjoy a movie break!</p>
+                    <span class="offer-code">Code: STUDENT20</span>
+                </div>
+                <button class="offer-btn">Claim Offer</button>
+            </div>
+
+            <!-- Offer 3 -->
+            <div class="offer-card" onclick="showOfferDetails('offer3')">
+                <div class="offer-info">
+                    <h2>Combo Deal</h2>
+                    <p>Get a free popcorn with every ticket on weekdays.</p>
+                    <span class="offer-code">Code: COMBOFREE</span>
+                </div>
+                <button class="offer-btn">Claim Offer</button>
+            </div>
+
+            <!-- Offer 4 -->
+            <div class="offer-card" onclick="showOfferDetails('offer4')">
+                <div class="offer-info">
+                    <h2>First-Time User</h2>
+                    <p>Flat 30% off on your first booking. Welcome aboard!</p>
+                    <span class="offer-code">Code: NEWUSER30</span>
+                </div>
+                <button class="offer-btn">Claim Offer</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Offer Details -->
+<div id="offerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Offer Details</h2>
+        <p id="modalDescription">Find out more about this exclusive offer!</p>
+        <button class="apply-btn" onclick="applyOffer()">Apply Offer</button>
+    </div>
+</div>
+
+
+    <script src="offers.js"></script>
+</body>
+</html>

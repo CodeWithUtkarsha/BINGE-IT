@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleseat.css" />
+    <title>Movie Seat Booking</title>
+</head>
+
+<body>
+    <div class="movie-container">
+        <label>Pick a movie:</label>
+        <select id="movie">
+        <option value="200">Ulajh</option>
+        <option value="220">saripoda sanivaram</option>
+        <option value="220">Kahani 2 (Rs.220)</option>
+        <option value="200">Monster House (Rs.200)</option>
+        <option value="180">Halloween (Rs.180)</option>
+        <option value="200">Inception (Rs.200)</option>
+      </select>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+        <button id="payButton">Pay</button>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Select Payment Method</h3>
+            <div class="payment-options">
+                <button onclick="showUPIPayment()">UPI</button>
+                <button onclick="showCardPayment()">Card</button>
+            </div>
+            <!-- UPI Payment Form -->
+            <div id="upiForm" class="payment-form" style="display: none;">
+                <h4>Enter UPI ID</h4>
+                <input type="text" id="upiID" placeholder="example@upi" />
+                <button onclick="processUPIPayment()">Proceed with UPI</button>
+            </div>
+            <!-- Card Payment Form -->
+            <div id="cardForm" class="payment-form" style="display: none;">
+                <h4>Enter Card Details</h4>
+                <input type="text" id="cardNumber" placeholder="Card Number" maxlength="16" />
+                <input type="text" id="cardName" placeholder="Cardholder Name" />
+                <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)" maxlength="5" />
+                <input type="text" id="cvv" placeholder="CVV" maxlength="3" />
+                <button onclick="processCardPayment()">Proceed with Card</button>
+            </div>
+        
+    </div>
+    </div>
+
+    <p class="text">
+        You have selected <span id="count">0</span> seats for a price of Rs.<span id="total">0</span
+      >
+    </p>
+    Ticket Generation Section
+<div id="ticketInfo" class="ticket-info" style="display: none;">
+    <h2>Ticket Generated</h2>
+    <p>Your ticket has been successfully generated!</p>
+    <p><strong>Movie:</strong> <span id="ticketMovie">Inception</span></p>
+    <p><strong>Seats Selected:</strong> <span id="ticketSeats">2</span></p>
+    <p><strong>Total Price:</strong> Rs.<span id="ticketPrice">0</span></p>
+    <button onclick="printTicket()">Print Ticket</button>
+</div>
+
+</div>
+
+    <script src="scriptseat.js"></script>
+  </body>
+</html>

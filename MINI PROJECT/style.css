@@ -1,0 +1,538 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* sets how the total width and height of an element is calculated. */
+}
+
+:root{
+    color: whitesmoke;
+    scroll-behavior: smooth;
+    font-family: 'Sen', sans-serif;
+    }
+body {
+        font-family: 'Arial', sans-serif;
+        background-color: #2f2f37; /* Dark background color */
+        margin: 0;
+        padding: 0;
+        display:list-item;
+        height: 100vh;
+        color: white; /* Make the default text color white */
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #2f2f37;
+    border: 2px solid black;
+    /* to align navbar in center of the header, we do display: flex */
+    display: flex; 
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 100; /* posiitons it's display above everything else */
+    /* keeps the position of the header fixed at the top of wepage throughout */
+}
+
+.navbar{
+    width: 100%;
+    height: 90%;
+    margin: 0px 20px;
+    
+    /* to align logo and menu  */
+    display: flex; 
+    gap: 20px;   /* gap b/w the logo container and menu  */
+}
+
+.logo-container{
+    flex: 0.1;
+    height: 100%;
+    margin: auto; /* to center within its container*/
+}
+
+#logo{
+    text-align: center;
+    font-size: 40px;
+    margin: 0px 20px;
+    cursor: pointer; 
+}
+
+.menu{
+    flex: 6;
+    /* to center the menu list */
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.menu li{
+    display: flex; /* to keep them inline */
+    /* display: inline can also be used here */
+    margin: 0px 10px;
+}
+
+.menu ul li{
+    list-style: none; 
+    padding: 0px;
+}
+
+.menu li a{
+    color: pink;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0px 0px;
+    padding: 8px 20px;
+}
+
+.menu li a:hover, .menu li a.active{
+    border-bottom: 1.5px solid pink;
+    color: white ;
+}
+
+
+/* ----------------------- */
+
+
+main{
+    position:relative;
+    top: 60px; /* space taken by header */
+}
+
+
+/* Slideshow */
+#slide-section{
+    width: 100%;
+    height: 400px;
+}
+
+.slideshow{
+    width: 99%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #2f2f37;
+}
+
+.slideshow img{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.slideshow input{
+    display: none;
+}
+
+.slide_img{
+    position: absolute;
+    width: 100%;
+	height: 100%;
+	z-index: -1; /* so that it displays below th */
+}
+
+#nav_slide {
+    width: 100%;
+    bottom: 5%;
+    height: 11px;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+    cursor: default;
+}
+.dots {
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 3px;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(187, 187, 187, 0.4);
+    transition: .4s;
+    cursor: pointer;
+}
+
+#dot1:hover, #dot2:hover, #dot3:hover, #dot4:hover
+{
+    background: white;
+}
+
+#i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three, #i4:checked ~ #four {
+    z-index: 9;
+    animation: scroll 1s ease-in-out;
+}
+
+#i1:checked ~ #nav_slide #dot1 {background: white;}
+#i2:checked ~ #nav_slide #dot2 {background: white;}
+#i3:checked ~ #nav_slide #dot3 {background: white;}
+#i4:checked ~ #nav_slide #dot4 {background: white;}
+
+@keyframes scroll {
+	0% { opacity: .4;}
+	100% { opacity: 1;}
+}
+
+#nav_slide .dots {
+    width: 12px;
+    height: 12px;
+}
+
+
+
+
+/* CONTENT */
+
+.content-container{
+    width: 100%;
+    height: 50rem;
+    margin: 20px 0px;
+
+    /* to align the ticket container and movie section side by side */
+    display: flex; 
+    gap: 2rem;
+
+}
+
+.ticket{
+    padding-top: 133px;
+    flex: 2;
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-choice{
+    border-radius: 23px;
+    width: 86%;
+    height: 90%;
+    color: aliceblue;
+}
+
+.transition{
+    transition: all 1s;
+}
+
+.ticket-choice:hover{
+    background-color: rgb(2, 2, 31);
+    box-shadow: 0px 0px 9px #bbb, -0px -0px 10px #bbb;
+    width: 95%;
+    height: 100%;
+}
+ 
+.ticket-choice h1{
+    color: antiquewhite;
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 2rem;
+}
+
+.select{
+    display: block;
+    width: 60%;
+    height: 7%;
+    margin: 20px auto;
+    padding: 0px 10px;
+
+    background-color: rgb(20, 22, 12);
+    color: aliceblue;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.ticket-choice p{
+    color: #FED7D7;
+    font-size: 1.1rem;
+    width: 60%;
+    height: 30%;
+    margin: auto;
+}
+
+.button{
+    color: aliceblue;
+    border: 1px solid lightcoral;
+    background-color: rgba(77, 10, 32, 0.178);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.75s ease-in-out;
+}
+.pagelink{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.button:hover{
+    border: 1px solid lightcoral;
+    box-shadow: 0px 0px 10px pink;
+    letter-spacing: 3px;
+}
+
+
+.movie-display{
+    width: 100%;
+    flex: 6;
+    text-align: center;   
+}
+
+.movie-display h1{
+    padding: 20px;
+    color: #FEFCBF;
+    color: antiquewhite;
+    display: block;
+    margin: 2rem 0rem;
+    font-size: 3rem;
+    display: flex-end;
+    
+}
+.movie-box-wrapper{
+    width: 95%;
+    margin: 0px auto;
+    height: 43rem;
+    position: relative;    
+}
+
+.movie-list{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    overflow-x: auto;
+    /* The overflow is clipped, and the rest of the content will be invisible */
+    /* but it adds a scrollbar when we slide*/
+}
+
+.movie-list::-webkit-scrollbar{
+    width: 0; /* to remove the scollbar */
+}
+
+.movie-card{
+    cursor: pointer;
+    margin-right:  30px;
+    position: relative;
+}
+
+.movie-card:first-child{
+    margin-left: 30px;
+}
+
+
+.movie-card:hover .movie-card-img{
+    transform: scale(1.2);
+    margin: 0px 30px;
+    box-shadow: 5px 5px 12px #333, -5px -5px 12px #333;
+    opacity: 0.5;
+}
+
+.movie-card:hover .movie-card-title,
+.movie-card:hover .movie-card-desc,
+.movie-card:hover .movie-card-button{
+    opacity: 1;
+}
+.movie-card:hover .card-bottom-text{
+    opacity: 0;
+}
+
+.movie-card-img{
+    transition: all .8s ease-in-out;
+    width: 242px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.movie-card-title{
+    background: rgba(51, 51, 51, 0.517);
+    padding: 0px 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    top: 20%;
+    left: 30px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.movie-card-desc{
+    background: rgba(51, 51, 51, 0.516);
+    padding: 10px;
+    font-size: 1em;
+
+    position: absolute;
+    top: 30%;
+    left: 30px;
+    width: 230px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-card-button{
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+    position: absolute;
+    bottom : 2rem;
+    left: 30px;
+    width: 80%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-card-button:hover{
+    background-color: white;
+    color: brown;
+}
+.card-bottom-text{
+    color: #121212;
+    transition: all 1s ease-in-out;
+}
+
+.content-onclick{
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 510px;
+    width: 100%;
+    height: 10.5rem;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#movie-content{
+    flex: 6;
+    font-size: 40px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btn{
+    flex: 1;
+    display: none;
+    margin: 15px auto;
+    padding: 10px 15px;
+    width: 120px;
+    font-size: 17px;
+    color: aliceblue;
+    border: 1px solid lightcoral;
+    background-color: rgba(77, 10, 32, 0.178);
+    cursor: pointer;
+    transition: all 0.75s ease-out;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 10px pink;
+    letter-spacing: 5px;
+}
+
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 60px;
+
+
+    padding: 20px 10px;
+}
+.bar{
+    flex: 1 1 0%;
+    height: 1px;
+    background: rgb(93, 93, 95);
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 100px;
+    gap: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.about{
+    flex: 1;
+    margin-right: 50px;
+}
+.about p{
+    margin-top: 10px;
+}
+.about h3{
+    /* margin-top: 110px; */
+    margin-bottom: 8px;
+}
+.contact-info{
+    flex: 1;
+}
+.contact-info h3{
+    margin-bottom: 8px ;
+}
+.contact-info li{
+    list-style: none;
+    padding: 2px;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: rgb(18, 17, 17);
+}
+
+.quick-links{
+    flex: 1;
+}
+.quick-links h3{
+    margin-bottom: 8px ;
+}
+.quick-links li{
+    list-style: none;
+    padding: 5px;
+}
+.quick-links li a{
+text-decoration: none;
+color: rgb(13, 13, 13);
+}
+
+.write-to-us{
+    flex: 1;
+}
+
+.write-to-us *{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.footer-logo{
+    text-align: center;
+    font-size: 13px;
+    width: 100%;
+    color: #bbb;
+    margin: 10px 0px;
+
+}
+
+.footer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.footer-wrapper strong{
+    font-size: 1.9rem;
+}
+
+.middle_icon img {
+    width: 120px;  /* Adjust the width to the desired size */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 50%;
+}
