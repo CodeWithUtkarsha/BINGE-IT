@@ -27,7 +27,7 @@ It simulates a real-world experience where users can:
 
 ## 🌐 Live Demo
 
-🔗 [Click to try it out](https://binge-q1rizcalo-newp.vercel.app)
+🔗 [Click to try it out](https://binge-mumu5er3m-newp.vercel.app)
 
 ---
 
@@ -38,5 +38,6 @@ It simulates a real-world experience where users can:
 - **JavaScript (Vanilla)**
 
 ---
+
 
 
