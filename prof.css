@@ -150,7 +150,7 @@ button:hover {
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1;
+    z-index: 1000; /* Ensure modal appears above all other content */
     left: 0;
     top: 0;
     width: 100%;
@@ -313,4 +313,77 @@ button:hover {
 
 .notification-dropdown li:last-child {
     border-bottom: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .profile-container h2 {
+        font-size: 20px;
+    }
+    
+    .profile-section h3 {
+        font-size: 16px;
+    }
+    
+    .profile-detail-box {
+        width: 90%;
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .notification-dropdown {
+        width: 200px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 5% auto;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .profile-container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .profile-container h2 {
+        font-size: 18px;
+    }
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-section {
+        padding: 15px;
+    }
+    
+    .profile-detail-box {
+        width: 95%;
+        padding: 6px;
+        font-size: 12px;
+    }
+    
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .notification-dropdown {
+        width: 180px;
+    }
 }
